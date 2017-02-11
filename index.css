@@ -1,0 +1,68 @@
+table td {
+    width: 100px;
+    height: 100px;
+    border: 1px dashed green;
+}
+
+.robot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 0 50% 50% 0;
+    left: 0;
+    bottom: 0;
+}
+
+.robot-opportunity {
+    background-color: blue;
+}
+
+.robot-opportunity.lost {
+    background-color: red;
+}
+
+.robot-2 {
+    background-color: green;
+}
+
+.robot-section,
+.control-section {
+    display: inline-block;
+}
+
+.robot-section {
+    position: relative;
+    /*
+    Assumption: Robot is big, and his center is place, which defines coordinates.
+    Meaning: Robot can be rectangular, quadratic, elliptic or whatever, but his center is significant place.
+    That is why pseudo-robot element positioned, so that to visualize centered position.
+    */
+    padding: 15px;
+    border: 1px dashed blue;
+}
+
+.control-section {
+    padding-left: 50px;
+    vertical-align: top;
+}
+
+.send {
+    color: #FFF;
+    background-color: #0095ff;
+    border-color: #07c;
+}
+
+.send[disabled]{
+    color: #FFF;
+    background-color: #cddbe4;
+    border-color: #bdcfdb;
+    cursor: not-allowed;
+}
+
+.output span:after {
+    content: " "
+}
+
+.lost {
+    color: red;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Martian Robots Task</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">    
+</head>
+
+<body>
+
+    <div class="robot-section">
+      <table cellspacing="0" cellPadding="0">
+          <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+          </tr>
+          <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+          </tr>
+          <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+          </tr>
+          <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+          </tr>
+          <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+          </tr>
+      </table>
+      <!-- Assumption: default state of Pseudo Robot container is right-directed-oriented DIV, meaning: East-oriented -->
+      <div class="robot robot-opportunity"></div>
+      <!-- <div class="robot robot-2"></div> -->
+    </div>
+    
+    <div class="control-section">
+      <h3>Input</h3>
+      <div>
+        <input type="text" id="first" class="edge" value="500 300">
+        <label for="first">Edge (defined area for Robot's work).</label>
+        <span>Tested: "100 100" (will fail validation)</span>
+      </div>
+      <div>
+
+        <input type="text" id="second" class="initial" value="1 1 E">
+        <label for="second">Initial Coordinates (where our robot located right now and how oriented).</label>
+        <span>Tested: "10 10 N"</span>
+      </div>
+      <div>
+        <input type="text" id="third" class="instruction" value="FLFLFRF" maxlength="100">
+        <label for="third">Instruction (to tell Robot how to behave).</label>
+        <span>Tested: "FLFLFRF", "FLFRFLF", "FLFFFFFFFF" </span>
+      </div>
+
+      <br>
+      
+      <button class="send">Send instruction</button>
+
+      <h3>Output</h3>
+
+      <div class="output">
+        <span class="x"></span>
+        <span class="y"></span>
+        <span class="orientation"></span>
+        <span class="lost"></span>
+        <div class="command"></div>
+      </div>
+      
+    </div>
+
+    <script type="text/javascript" src="./index.js"></script>
+
+</body> 
+</html>
